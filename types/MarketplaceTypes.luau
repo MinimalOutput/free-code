@@ -1,12 +1,15 @@
---[[ReceiptInfo given by MarketplaceService.ProcessReceipt, according to the docs: https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#ProcessReceipt.
-types inferred from code examples.]]
+--[[
+    ReceiptInfo given by MarketplaceService.ProcessReceipt, according to the docs @ https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#ProcessReceipt.
+    types inferred from code examples.
+]]
+
 export type MarketplaceServiceReceiptInfo = {
     PlayerId: number,
     PlaceIdWherePurchased: number,
     PurchaseId: string,
     ProductId: number,
     CurrencySpent: number,
-    CurrencyType: Enum.CurrencyType,
+    CurrencyType: Enum.CurrencyType, -- always Enum.CurrencyType.Robux
 }
 
 export type MarketplaceServiceProductInfo = {
@@ -41,4 +44,4 @@ export type MarketplaceServiceProductInfo = {
     ContentRatingTypeId: number,
 }
 
-return false -- return something for luau to be happy
+return false -- return something so roblox don't get cranky at me.
